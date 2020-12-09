@@ -1,7 +1,9 @@
 import Nav from '../components/nav'
+import Footer from '../components/footer'
 import Image from 'next/image'
 
 export default function IndexPage() {
+  
   return (
     <div>
       <Nav />
@@ -70,6 +72,8 @@ export default function IndexPage() {
 
         </div>
       </div>
+      <Footer/>
     </div>
+
   )
 }
