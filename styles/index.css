@@ -17,7 +17,7 @@ body {
 }
 
 .orange {
-  background-color: #FF5C00
+  background-color: #CD7F32
 }
 /* Start purging... */
 @tailwind utilities;
