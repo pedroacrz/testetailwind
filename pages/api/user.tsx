@@ -5,15 +5,15 @@ import connect from '../../utils/database';
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
 
     if (req.method === 'POST') {
-        const {name,age} = req.body;
-        if(!name || !age){
+        const {nome,moedas} = req.body;
+        if(!nome || !moedas){
             res.status(406).json({message: 'Wrong parameters'})
             return;
         }
         const { db } = await connect();
         const response = await db.collection('users').insertOne({
-            name: req.body.name,
-            age: req.body.age
+            nome: req.body.nome,
+            moedas: req.body.moedas
         });
         res.status(200).json(response.ops[0])
     }
